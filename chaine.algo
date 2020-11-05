@@ -1,0 +1,35 @@
+ALGORITHM checkpoint 
+VAR 
+ch : STRING; 
+i : INTEGER;
+l, nw, nv : INTEGER := 0;
+BEGIN
+Read (ch);
+l := ch.length;
+Write(l);
+FOR i FROM 1 to l DO
+nw := 0;
+IF(ch[i]=" ") DO
+nw := nw + 1 ;
+END_WHILE
+END_IF
+Write (nw + 1);
+FOR i FROM 1 to l DO
+nv := 0;
+SWITCH (ch[i]) do
+case 'a': nv:= nv+1 ;
+case 'e': nv:= nv+1 ; 
+case 'i': nv:= nv+1 ;
+case 'o': nv:= nv+1 ;
+case 'u': nv:= nv+1 ;
+case 'y': nv:= nv+1 ;
+case 'A': nv:= nv+1 ;
+case 'E': nv:= nv+1 ; 
+case 'I': nv:= nv+1 ;
+case 'O': nv:= nv+1 ;
+case 'U': nv:= nv+1 ;
+case 'Y': nv:= nv+1 ;
+END_SWITCH
+END_FOR
+Write (nv);
+END 
